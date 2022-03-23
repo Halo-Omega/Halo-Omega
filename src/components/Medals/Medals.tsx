@@ -4,7 +4,7 @@ interface IMedalsProps {
 }
 
 const Medals: React.FunctionComponent<IMedalsProps> = (props) => {
-  return (<div></div>);
+  return (<h1>Medals Page</h1>);
 };
 
 export default Medals;

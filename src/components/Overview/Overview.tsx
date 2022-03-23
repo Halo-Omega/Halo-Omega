@@ -4,7 +4,7 @@ interface IOverviewProps {
 }
 
 const Overview: React.FunctionComponent<IOverviewProps> = (props) => {
-  return (<div></div>);
+  return (<h1>Overview Page</h1>);
 };
 
 export default Overview;

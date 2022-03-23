@@ -4,7 +4,7 @@ interface IMatchesProps {
 }
 
 const Matches: React.FunctionComponent<IMatchesProps> = (props) => {
-  return (<div></div>);
+  return (<h1>Matches Page</h1>);
 };
 
 export default Matches;
