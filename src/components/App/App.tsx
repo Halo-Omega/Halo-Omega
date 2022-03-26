@@ -1,12 +1,28 @@
-import * as React from "react";
+// import * as React from "react";
+import React, {useState, useEffect} from 'react';
 import { Route, Routes } from 'react-router-dom'
 import Comparison from "../Comparison/Comparison";
 import Home from "../Home/Home";
 import Matches from "../Matches/Matches";
 import Medals from "../Medals/Medals";
 import Overview from "../Overview/Overview";
+const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
 
 const App = () => {
+    let [fetchState, setFetchState] = useState({})
+    useEffect(() => {
+        async function testFetch() {
+            let result = await lib.halo.infinite["@0.3.9"].stats.matches.list({
+                gamertag: 'daymanf0tnm',
+                limit: {
+                    "count": 1,
+                    "offset": 0
+                }
+            })
+            console.log(result)
+        }
+        testFetch()
+    }, [])
     return (
         <div>
             <Routes>
